@@ -43,8 +43,7 @@ declare -a manualInstall=(
 'metasploit: "http://downloads.metasploit.com/data/releases/metasploit-latest-linux-installer.run"'
 'nessus: "http://www.tenable.com/products/nessus/select-your-operating-system"'
 'whatmask: "wget http://downloads.laffeycomputer.com/current_builds/whatmask/whatmask-1.2.tar.gz"'
-'spiderfoot: "wget http://sourceforge.net/projects/spiderfoot/files/spiderfoot-2.0.5-src.tar.gz/download"'
-'The Harvester: "wget https://theharvester.googlecode.com/files/theHarvester-2.2a.tar.gz"'
+'spiderfoot: "wget http://sourceforge.net/projects/spiderfoot/files/spiderfoot-2.0.5-src.tar.gz/download"
 );
 
 declare -a pythonInstall=(
