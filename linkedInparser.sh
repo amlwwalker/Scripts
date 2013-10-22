@@ -11,26 +11,28 @@ while read line; do
 	replace="</string>"
 	with=""
 	description=${description//$replace/$with}
-	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
-	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
-	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$name\">"
-	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
-	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
-	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$address\" />"
-        randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
-	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
-	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$job\" />"
-	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
-	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
-	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$email\" />"
-	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
-	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
-	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$description\" />"
-	echo "</node>"
-	if [[ $position == "left" ]]
-	then
-		position="right";
-	else position="left";
-	fi	
+
+echo $name","$email","$job;
+#	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
+#	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
+#	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$name\">"
+#	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
+#	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
+#	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$address\" />"
+#       randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
+#	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
+#	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$job\" />"
+#	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
+#	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
+#	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$email\" />"
+#	randomId=$(echo $[ 100000000 + $[ RANDOM % 999999999 ]]);
+#	randomModified=$(echo $[ 1000000000000 + $[ RANDOM % 9999999999999 ]]);
+#	echo "<node CREATED=\"1380529239661\" ID=\"ID_$randomId\" MODIFIED=\"$randomModified\" POSITION=\"$position\" TEXT=\"$description\" />"
+#	echo "</node>"
+#	if [[ $position == "left" ]]
+#	then
+#		position="right";
+#	else position="left";
+#	fi	
 done < $1
 
