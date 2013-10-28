@@ -1,6 +1,29 @@
 #!/bin/bash
 
 declare -a autoInstall=(
+
+
+#Ettercap may need lots of dependencies:
+
+#build-essential
+#linux-headers-`uname -r`
+#libpcre3-dev
+#libpcap0.8-dev
+#libnet1-dev
+#openssl
+#libssl-dev
+#ncurses-bin
+#libncurses5-dev
+#libnet6-1.3-dev
+#libpthread-stubs0-dev
+#zlib1g-dev
+#libltdl-dev
+#pango-graphite
+#pkg-config
+#libpango1.0-dev
+#libatk1.0-dev
+#libgtk2.0-dev
+
 'libnl-dev'
 'build-essential'
 'libssl-dev'
@@ -31,6 +54,9 @@ declare -a autoInstall=(
 'hping3'
 'sipcalc'
 'python-m2crypto'
+'ettercap-graphical'
+'ettercap-common'
+'aircack-ng'
 );
 #Programs to manual install
 declare -a manualInstall=(
