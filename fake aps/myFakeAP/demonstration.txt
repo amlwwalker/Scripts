@@ -1,0 +1,6 @@
+Remember to change the ip address in: sudo nano /usr/share/ettercap/etter.dns 
+The user/pass typed in are store at /opt/lampp/htdocs/people.txt
+
+1. Do ettercap demo - the redirect and telling you what you typed in.
+2. The encryption removal
+3. The simple access point
