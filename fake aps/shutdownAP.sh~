@@ -42,7 +42,7 @@ killExternalAccess () {
 # Stop the DHCP server
 stopDHCP () {
     echo -n "Stopping DHCP server...              "
-    service isc-dhcp-server stop > /dev/null 2>&1
+    service dhcp3-server stop > /dev/null 2>&1
     sleep 2 
     echo "DONE"
 }

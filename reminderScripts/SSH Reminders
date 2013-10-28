@@ -1,0 +1,56 @@
+Forwarding Remote Ports to You
+******************************
+
+Example: you're behind a firewall at the office, and your home computer is listening on the SSH port. You can connect out of the office to your home computer, opening a port so that, once you're home, you can SSH back to the office again (bypassing the firewall).
+
+ssh -R 9022:localhost:22 remotehost.com
+
+This will open port 9022 on remotehost.com (loopback only; you can only connect to 9022 from the local remotehost.com, not from elsewhere on the internet), and forward it to "localhost:22", where "localhost" refers to your computer at the office, and 22 is of course the SSH port.
+
+By default the remote host only would make port 9022 available on the loopback address, so from your home PC you can do ssh -p 9022 localhost and connect to it, but you can't do e.g. ssh -p 9022 remotehost.com and connect to it from somewhere else on the Internet.
+
+To open the port on all interfaces (thus making it available on the internet too):
+
+ssh -R *:9022:localhost:22 remotehost.com
+
+Replace the * with any other bind address if you want.
+
+Forwarding Local Ports to Remote
+********************************
+
+If your home computer is running a web server on port 80, and for some reason you can't get to it from the Internet (firewall blocking it, maybe), you can forward a local port on your office computer that gets you to port 80 on your home computer.
+
+ssh -L 8080:localhost:80 remotehost.com
+
+Here, 8080 is opened on your office computer, for the loopback interface only, and localhost:80 refers to port 80 on the remote (home) computer. It's the reverse of ssh -R.
+
+Then you open Firefox and go to http://localhost:8080/ and yer in.
+
+Another example: you have a VNC (remote desktop) server running on remotehost.com, but the VNC protocol itself is insecure, and you don't want your password being sent across the network in clear text to log in. So, you need your VNC traffic to be encrypted via SSH.
+
+Here, remotehost.com is listening on port 5900 (the VNC port). You want to open a port on your local computer to the same number, so that you connect a VNC client to "localhost:5900" and it really connects you to "remotehost.com:5900" over a secure SSH tunnel:
+
+ssh -L 5900:localhost:5900 remotehost.com
+
+Then with your VNC client, just connect it to "localhost".
+"Penetrating" the Remote Network
+Use case scenario: I'm at the office, and at home only my main PC can be reached from the Internet (the router forwards all ports to it); but, I also left my laptop at home turned on and it has a VNC server and I wanna get remote desktop access to it from work. So I'll use my home PC to set up a bridge so I can connect to the VNC server on the laptop, which has a private LAN IP address of say, 10.10.1.101.
+
+ssh -L 5900:10.10.1.101:5900 remotehost.com
+
+Here "remotehost.com" goes to the main PC which I can access.
+
+This opens up a listening port 5900 on my local (office PC) -- the first 5900 in the command -- and if I connect to it, it will use remotehost.com as a jumping off point to connect onward to 10.10.1.101:5900 (the laptop with a private LAN IP address on the remote network).
+
+Then I point my VNC client at "localhost" and I end up with remote desktop on the laptop.
+
+Using SSH as a Secure SOCKS 5 Proxy
+**********************************
+
+As a bonus, here's how to open up a secure SOCKS 5 proxy over SSH:
+
+ssh -D 8080 remotehost.com
+
+Now you can configure your programs (e.g. Pidgin, Firefox) to use a SOCKS 5 proxy and have them connect to localhost:8080. All their internet traffic will be routed through the SSH tunnel to remotehost.com, secured, and then enter the cloud from there.
+
+Additionally, this can be used to reach other devices on the remote server's LAN that you otherwise couldn't get to. For example, turn on your proxy settings in Firefox and you can navigate to http://192.168.1.1/ to log into the router from the remote LAN (as opposed to a router on your local LAN). The SOCKS 5 proxy would cause Firefox (or any other app configured to use it) to use "remotehost.com" as a jumping off point into the internet, so it can connect to other local network devices on its end just the same. 
