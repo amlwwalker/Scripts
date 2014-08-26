@@ -1,6 +1,6 @@
 #stop connection properly
 
-#stop monitoring
+# Stop monitoring (toss away output)
 airmon-ng stop mon0 > /dev/null 2>&1
 
 #Kill Routing
