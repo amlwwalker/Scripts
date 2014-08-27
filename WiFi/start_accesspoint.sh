@@ -35,7 +35,7 @@ ifconfig $DEV_AP up 192.168.99.1 netmask 255.255.255.0
 # Start the DHCP server.
 route add -net 192.168.99.0 netmask 255.255.255.0 gw 192.168.99.1
 service isc-dhcp-server start > /dev/null 2>&1 
-sleep 10
+sleep 5
 
 
 # Flush the iptables.

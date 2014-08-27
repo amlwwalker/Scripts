@@ -1,31 +1,62 @@
-#stop connection properly
+#!/bin/bash
+
+######################################################################################
+######################################################################################
+
+# Authors: Alex Walker, Luuk Derksen
+
+######################################################################################
+
+
+# SETUP
+AP_NAME="Fr33 Public WiFi"
+AP_MAC=""
+DEV_MON="mon0"
+DEV_AP="at0"
+DEV_INET="wlan3"
+
+
+######################################################################################
+######################################################################################
+
 
 # Stop monitoring (toss away output)
-airmon-ng stop mon0 > /dev/null 2>&1
+airmon-ng stop $DEV_MON > /dev/null 2>&1
 
-#Kill Routing
+
+# Kill Routing
 iptables -t nat -D POSTROUTING -o wlan0 -s 192.168.121.0/24 -j MASQUERADE > /dev/null 2>&1
 iptables -t nat -D PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080 > /dev/null 2>&1
 iptables -t nat -D PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8080 > /dev/null 2>&1
+# Flush the iptables.
+iptables --flush
+iptables --table nat --flush
+iptables --delete-chain
+iptables --table nat --delete-chain
+
+
 echo 0 > /proc/sys/net/ipv4/ip_forward
 
-#Stopping DHCP
+
+# Stopping DHCP
 service isc-dhcp-server stop > /dev/null 2>&1
 
-#Kill External Access
-ifconfig at0 down > /dev/null 2>&1
-    sleep 2 
 
-#Kill Access point
+# Kill External Access
+ifconfig $DEV_AP down > /dev/null 2>&1
+sleep 5
+
+
+# Kill Access point
 basepid=`ps -ef | grep -i [a]irbase | awk '{ print $2 }'`
 echo $basepid
 kill -9 $basepid > /dev/null 2>&1
 
-#Kill All logs
-rm -f /tmp/ap_access_list > /dev/null 2>&1
-rm -f /tmp/ethlist > /dev/null 2>&1
-rm -Rf /tmp/driftimages > /dev/null 2>&1
-rm -f /tmp/pre > /dev/null 2>&1
-rm -f /tmp/post > /dev/null 2>&1
 
-rm log.txt
+# # Kill All logs
+# rm -f /tmp/ap_access_list > /dev/null 2>&1
+# rm -f /tmp/ethlist > /dev/null 2>&1
+# rm -Rf /tmp/driftimages > /dev/null 2>&1
+# rm -f /tmp/pre > /dev/null 2>&1
+# rm -f /tmp/post > /dev/null 2>&1
+# rm log.txt
